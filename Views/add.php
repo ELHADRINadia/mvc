@@ -1,7 +1,8 @@
 <?php
-$data = new EmployersControllers();
-$employes = $data->getAllEmployes();
-
+if (isset($_POST['submit'])) {
+    $newEmploye = new EmployersControllers();
+    $newEmploye->addEmploye();
+}
 ?>
 <div class="wrapper">
     <div class="row my-4">
@@ -17,27 +18,24 @@ $employes = $data->getAllEmployes();
                         <label for="nom">Nom*</label>
                         <input type="text" name="nom" class="form-control" placeholder="Nom">
                     </div>
-                    
-                    <div class="form-group ">
-                        <label for="prenom">Prenom*</label>
-                        <input type="text" name="prenom" class="form-control" placeholder="prenom ">
-                    </div>
-                    
+
+
+
                     <div class="form-group ">
                         <label for="matricule">Matricule*</label>
                         <input type="text" name="matricule" class="form-control" placeholder="Matricule">
                     </div>
-                    
+
                     <div class="form-group ">
                         <label for="departement">Departement*</label>
                         <input type="text" name="departement" class="form-control" placeholder="departement">
                     </div>
-                    
+
                     <div class="form-group ">
                         <label for="poste">Poste*</label>
                         <input type="text" name="poste" class="form-control" placeholder="poste">
                     </div>
-                    
+
                     <div class="form-group ">
                         <label for="date_embauche">Date embauche*</label>
                         <input type="date" name="date_embauche" class="form-control">
@@ -49,6 +47,7 @@ $employes = $data->getAllEmployes();
                             <option value="0">Résilié</option>
                         </select>
                     </div>
+</br>
                     <div class="form-group ">
                         <button type="submit" class=" btn btn-primary" name="submit">Valider</button>
                     </div>
@@ -58,7 +57,7 @@ $employes = $data->getAllEmployes();
 
 
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
-</div>                   
+</div>

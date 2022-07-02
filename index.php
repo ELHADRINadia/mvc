@@ -19,4 +19,6 @@
 ?>
 <?php   
     require_once './views/includes/footer.php';
-?>
+?> 
+ 
+
